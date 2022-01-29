@@ -14,6 +14,7 @@ struct Vehicle
     
     virtual void setSpeed(int s);
     virtual void tryToEvade();
+    virtual void dontEvade();
     
 protected:
     int speed = 0;
