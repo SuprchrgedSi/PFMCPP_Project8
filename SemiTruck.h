@@ -6,11 +6,11 @@ struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& s);
 
-    virtual ~SemiTruck() override = default;
-    SemiTruck(const SemiTruck&) = default;
-    SemiTruck& operator=(const SemiTruck&) = default;
+    virtual ~SemiTruck() override;
+    SemiTruck(const SemiTruck&);
+    SemiTruck& operator=(const SemiTruck&);
     
-    void honkForSpace(int s);
+    void honkForSpace();
     void dontEvade() override; // Semis will not try to evade when this is called
 
 };

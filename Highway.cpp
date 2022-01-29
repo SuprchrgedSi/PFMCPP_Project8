@@ -26,6 +26,10 @@ void Highway::addVehicleInternal(Vehicle* v)
     {
         bike->lanesplitAndRace(120);
     }
+    if(auto * truck = dynamic_cast<SemiTruck *>(v))
+    {
+        truck->honkForSpace();
+    }
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
     */
@@ -41,6 +45,10 @@ void Highway::removeVehicleInternal(Vehicle* v)
     if(auto * bike = dynamic_cast<Motorcycle *>(v))
     {
         bike->tryToEvade();
+    }
+    if(auto * truck = dynamic_cast<SemiTruck *>(v))
+    {
+        truck->dontEvade();
     }
 
     /*
