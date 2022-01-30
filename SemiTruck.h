@@ -2,7 +2,7 @@
 #include <string>
 #include "Vehicle.h"
 
-struct SemiTruck : public Vehicle
+struct SemiTruck : Vehicle
 {
     SemiTruck(const std::string& s);
 
@@ -11,6 +11,6 @@ struct SemiTruck : public Vehicle
     SemiTruck& operator=(const SemiTruck&);
     
     void honkForSpace();
-    void dontEvade() override; // Semis will not try to evade when this is called
+    void dontEvade(); // Semis will not try to evade when this is called
 
 };

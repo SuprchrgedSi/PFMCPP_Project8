@@ -49,11 +49,11 @@ std::string HighwayPatrol::getClassName(Vehicle* v)
     {
         return "car";
     }
-    if(auto * bike = dynamic_cast<Motorcycle *>(v))
+    else if(auto * bike = dynamic_cast<Motorcycle *>(v))
     {
         return "motorcycle";
     }
-    if(auto * truck = dynamic_cast<SemiTruck *>(v))
+    else if(auto * truck = dynamic_cast<SemiTruck *>(v))
     {
         return "semi truck";
     }

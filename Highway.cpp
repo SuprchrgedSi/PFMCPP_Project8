@@ -22,11 +22,11 @@ void Highway::addVehicleInternal(Vehicle* v)
     {
         car->closeWindows();
     }
-    if(auto * bike = dynamic_cast<Motorcycle *>(v))
+    else if(auto * bike = dynamic_cast<Motorcycle *>(v))
     {
         bike->lanesplitAndRace(120);
     }
-    if(auto * truck = dynamic_cast<SemiTruck *>(v))
+    else if(auto * truck = dynamic_cast<SemiTruck *>(v))
     {
         truck->honkForSpace();
     }
@@ -42,11 +42,11 @@ void Highway::removeVehicleInternal(Vehicle* v)
     {
         car->tryToEvade();
     }
-    if(auto * bike = dynamic_cast<Motorcycle *>(v))
+    else if(auto * bike = dynamic_cast<Motorcycle *>(v))
     {
         bike->tryToEvade();
     }
-    if(auto * truck = dynamic_cast<SemiTruck *>(v))
+    else if(auto * truck = dynamic_cast<SemiTruck *>(v))
     {
         truck->dontEvade();
     }

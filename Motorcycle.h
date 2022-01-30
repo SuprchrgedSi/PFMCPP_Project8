@@ -5,7 +5,7 @@
 
 #include "Vehicle.h"
 
-struct Motorcycle : public Vehicle
+struct Motorcycle : Vehicle
 {
     Motorcycle(const std::string& n);
     

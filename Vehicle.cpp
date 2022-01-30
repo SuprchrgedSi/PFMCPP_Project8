@@ -11,5 +11,3 @@ void Vehicle::tryToEvade()
     std::cout << name << ": you'll never take me alive, ya dirty coppers!" << std::endl;
     setSpeed(100);
 }
-
-void Vehicle::dontEvade() {}
